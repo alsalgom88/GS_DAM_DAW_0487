@@ -1,0 +1,90 @@
+<svg width="1200" height="380" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="400" fill="#020617" rx="20"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-family="system-ui"
+        font-size="24" fill="#e5e7eb" font-weight="600">Patró MVI — Model · View · Intent</text>
+  <text x="600" y="62" text-anchor="middle" font-family="system-ui"
+        font-size="15" fill="#9ca3af">Flux unidireccional amb estat immutable i intents</text>
+
+  <!-- User -->
+  <circle cx="120" cy="200" r="38" fill="#22c55e"/>
+  <text x="120" y="196" text-anchor="middle" font-size="30" fill="#e5e7eb">👤</text>
+  <text x="120" y="222" text-anchor="middle" font-size="13" fill="#e5e7eb">Usuari</text>
+
+  <!-- View -->
+  <rect x="220" y="130" width="220" height="140" rx="16"
+        fill="#020617" stroke="#38bdf8" stroke-width="3"/>
+  <text x="330" y="165" text-anchor="middle" font-size="20" fill="#e0f2fe" font-weight="600">View</text>
+  <text x="330" y="190" text-anchor="middle" font-size="13" fill="#9ca3af">rep interaccions</text>
+  <text x="330" y="210" text-anchor="middle" font-size="13" fill="#9ca3af">mostra estat immutable</text>
+
+  <!-- Intent -->
+  <rect x="480" y="70" width="220" height="100" rx="16"
+        fill="#020617" stroke="#a855f7" stroke-width="3"/>
+  <text x="590" y="105" text-anchor="middle" font-size="20" fill="#e9d5ff" font-weight="600">Intents</text>
+  <text x="590" y="128" text-anchor="middle" font-size="13" fill="#9ca3af">accions de l’usuari</text>
+
+  <!-- Reducer / Model -->
+  <rect x="480" y="200" width="260" height="140" rx="16"
+        fill="#020617" stroke="#22c55e" stroke-width="3"/>
+  <text x="610" y="235" text-anchor="middle" font-size="20" fill="#bbf7d0" font-weight="600">
+    Model / Reducer
+  </text>
+  <text x="610" y="258" text-anchor="middle" font-size="13" fill="#9ca3af">
+    processa intents
+  </text>
+  <text x="610" y="278" text-anchor="middle" font-size="13" fill="#9ca3af">
+    genera nou estat immutable
+  </text>
+
+  <!-- State -->
+  <rect x="820" y="130" width="250" height="140" rx="16"
+        fill="#020617" stroke="#f97316" stroke-width="3"/>
+  <text x="945" y="165" text-anchor="middle" font-size="20" fill="#fed7aa" font-weight="600">State</text>
+  <text x="945" y="190" text-anchor="middle" font-size="13" fill="#9ca3af">origen únic de veritat</text>
+  <text x="945" y="210" text-anchor="middle" font-size="13" fill="#9ca3af">immutable</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#e5e7eb"/>
+    </marker>
+    <marker id="cyan" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="purple" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#a855f7"/>
+    </marker>
+    <marker id="green" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#22c55e"/>
+    </marker>
+    <marker id="orange" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <!-- User -> View -->
+  <line x1="158" y1="200" x2="220" y2="200" stroke="#e5e7eb" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- View -> Intents -->
+  <line x1="330" y1="130" x2="450" y2="100" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#cyan)"/>
+
+  <!-- View -> Intent label -->
+  <text x="430" y="118" text-anchor="middle" font-size="12" fill="#e0f2fe">intents (events)</text>
+
+  <!-- Intent -> Model/Reducer -->
+  <line x1="590" y1="170" x2="590" y2="200" stroke="#a855f7" stroke-width="2.5" marker-end="url(#purple)"/>
+  <text x="610" y="185" text-anchor="start" font-size="12" fill="#e9d5ff">processar</text>
+
+  <!-- Reducer -> State -->
+  <line x1="740" y1="235" x2="820" y2="200" stroke="#22c55e" stroke-width="2.5" marker-end="url(#green)"/>
+  <text x="780" y="190" text-anchor="middle" font-size="12" fill="#bbf7d0">nou estat</text>
+
+  <!-- State -> View -->
+  <path d="M820 200 C 720 400, 520 400, 440 200"
+      stroke="#f97316" stroke-width="2.5" fill="none" marker-end="url(#orange)"/>
+
+  <text x="630" y="370" text-anchor="middle" font-size="12" fill="#fed7aa">state → render(View)</text>
+</svg>

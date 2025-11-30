@@ -1,0 +1,112 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fons -->
+  <rect x="0" y="0" width="900" height="280" fill="#020617" rx="16"/>
+
+  <!-- Títol -->
+  <text x="450" y="30" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="20" fill="#e5e7eb" font-weight="600">
+    Patró MVVM — Model · View · ViewModel
+  </text>
+  <text x="450" y="50" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="13" fill="#9ca3af">
+    Vista reactiva: observa l’estat del ViewModel i es redibuixa automàticament
+  </text>
+
+  <!-- Usuari -->
+  <circle cx="80" cy="150" r="32" fill="#22c55e"/>
+  <text x="80" y="146" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="26" fill="#e5e7eb">👤</text>
+  <text x="80" y="188" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#e5e7eb">Usuari</text>
+
+  <!-- Vista -->
+  <rect x="150" y="100" width="190" height="120" rx="12" fill="#020617" stroke="#38bdf8" stroke-width="2"/>
+  <text x="245" y="128" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="16" fill="#e0f2fe" font-weight="600">View</text>
+  <text x="245" y="148" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">UI declarativa / pantalla</text>
+  <text x="245" y="166" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">observa l’estat</text>
+
+  <!-- ViewModel -->
+  <rect x="380" y="80" width="200" height="160" rx="12" fill="#020617" stroke="#22c55e" stroke-width="2"/>
+  <text x="480" y="108" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="16" fill="#bbf7d0" font-weight="600">ViewModel</text>
+  <text x="480" y="128" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">conté ESTAT observable</text>
+  <text x="480" y="146" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">rep accions de la Vista</text>
+  <text x="480" y="164" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">crida el Model</text>
+
+  <!-- Estat dins del ViewModel -->
+  <rect x="410" y="170" width="140" height="52" rx="10" fill="#052e16" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="480" y="190" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#bbf7d0">State / LiveData / Flow</text>
+
+  <!-- Model -->
+  <rect x="620" y="100" width="200" height="120" rx="12" fill="#020617" stroke="#f97316" stroke-width="2"/>
+  <text x="720" y="128" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="16" fill="#fed7aa" font-weight="600">Model</text>
+  <text x="720" y="148" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">repositoris, serveis, DB</text>
+  <text x="720" y="166" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="12" fill="#9ca3af">sense referència a la View</text>
+
+  <!-- DB icona -->
+  <ellipse cx="840" cy="90" rx="30" ry="14" fill="#0b1120" stroke="#f97316" stroke-width="2"/>
+  <ellipse cx="840" cy="90" rx="30" ry="6" fill="#111827" stroke="#f97316" stroke-width="2"/>
+  <rect x="810" y="90" width="60" height="32" fill="#111827" stroke="#f97316" stroke-width="2"/>
+  <text x="840" y="112" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="10" fill="#fed7aa">DB / API</text>
+
+  <!-- Marcadors fletxes -->
+  <defs>
+    <marker id="arrowWhiteMVVM" markerWidth="10" markerHeight="10" refX="9" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 z" fill="#e5e7eb"/>
+    </marker>
+    <marker id="arrowCyanMVVM" markerWidth="10" markerHeight="10" refX="9" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreenMVVM" markerWidth="10" markerHeight="10" refX="9" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 z" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowOrangeMVVM" markerWidth="10" markerHeight="10" refX="9" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 z" fill="#f97316"/>
+    </marker>
+  </defs>
+
+  <!-- Usuari -> Vista -->
+  <line x1="112" y1="150" x2="150" y2="150" stroke="#e5e7eb" stroke-width="2" marker-end="url(#arrowWhiteMVVM)"/>
+  <text x="130" y="140" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="11" fill="#e5e7eb">clic, input</text>
+
+  <!-- Vista -> ViewModel (accions) -->
+  <line x1="340" y1="130" x2="380" y2="130" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrowCyanMVVM)"/>
+  <text x="360" y="120" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="11" fill="#e0f2fe">events / intents</text>
+
+  <!-- ViewModel -> Model -->
+  <line x1="580" y1="130" x2="620" y2="130" stroke="#22c55e" stroke-width="2" marker-end="url(#arrowGreenMVVM)"/>
+  <text x="600" y="120" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="11" fill="#bbf7d0">consultes, ordres</text>
+
+  <!-- Model -> DB -->
+  <line x1="820" y1="140" x2="840" y2="122" stroke="#f97316" stroke-width="2" marker-end="url(#arrowOrangeMVVM)"/>
+  <line x1="840" y1="122" x2="820" y2="140" stroke="#f97316" stroke-width="2"/>
+
+  <!-- Model -> ViewModel (dades) -->
+  <line x1="620" y1="170" x2="580" y2="170" stroke="#f97316" stroke-width="2" marker-end="url(#arrowOrangeMVVM)"/>
+  <text x="600" y="184" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="11" fill="#fed7aa">resultats</text>
+
+  <!-- STATE reactivitat: ViewModel -> View (binding) -->
+  <path d="M410 196 C 360 210, 330 190, 300 176"
+        stroke="#22c55e" stroke-width="2" fill="none" marker-end="url(#arrowGreenMVVM)"/>
+  <text x="340" y="204" text-anchor="middle" font-family="system-ui, sans-serif"
+        font-size="11" fill="#bbf7d0">binding: estat → UI</text>
+</svg>

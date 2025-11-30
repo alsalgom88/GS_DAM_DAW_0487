@@ -1,0 +1,23 @@
+<svg width="520" height="520" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" font-family="Arial">
+
+  <text x="260" y="40" font-size="22" text-anchor="middle" font-weight="bold">
+    Clean Architecture
+  </text>
+
+  <!-- External -->
+  <circle cx="260" cy="260" r="210" fill="#e8f0fe" stroke="#4a78dd" stroke-width="3"/>
+  <text x="260" y="80" text-anchor="middle" font-size="16">External / Infraestructura</text>
+
+  <!-- Adapters -->
+  <circle cx="260" cy="260" r="150" fill="#e7f7ec" stroke="#34a853" stroke-width="3"/>
+  <text x="260" y="130" text-anchor="middle" font-size="16">Adapters</text>
+
+  <!-- Use Cases -->
+  <circle cx="260" cy="260" r="95" fill="#fff3cd" stroke="#e0a800" stroke-width="3"/>
+  <text x="260" y="200" text-anchor="middle" font-size="16">Use Cases</text>
+
+  <!-- Domain -->
+  <circle cx="260" cy="260" r="45" fill="#fdecef" stroke="#d63384" stroke-width="3"/>
+  <text x="260" y="265" text-anchor="middle" font-size="14">Domain</text>
+
+</svg>
